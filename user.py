@@ -24,7 +24,7 @@ def create():
         time.hour = int(input('输入小时:'))
         time.minute = int(input('输入分钟:'))
     elif loop == 3:
-        time.week = int(input('输入周几:'))
+        time.weekday = int(input('输入周几:'))
         time.hour = int(input('输入小时:'))
         time.minute = int(input('输入分钟:'))
     else:
