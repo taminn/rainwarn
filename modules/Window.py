@@ -52,6 +52,7 @@ def get_weather(city_id):
 def show(msg,weather,city):
     msg = format_msg(msg)
     window = tkinter.Tk()
+    window.wm_attributes('-topmost',1)
     window.bind("<Double-Button-1>", lambda x,ob=window:ob.destroy())
     window.title('')
     window.overrideredirect(True)  # 取消边框

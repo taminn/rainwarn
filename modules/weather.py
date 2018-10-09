@@ -17,16 +17,18 @@ class weather:
 
 def get_weather_info(city_id):
     url = "https://free-api.heweather.com/s6/weather/forecast?location={city_id}&key=8d1050f774c04190a70c7e62aa088a22".format(city_id=city_id)
-    try:
-        html = request.urlopen(url)
-        text = html.read().decode('utf-8')
-    except:
-        time.sleep(60)
+    cnt=0
+    while(True):
         try:
             html = request.urlopen(url)
             text = html.read().decode('utf-8')
+            break
         except:
-            return None
+            time.sleep(10)
+            cnt+=1
+            if cnt>60:
+                return None
+
     try:
         info = json.loads(text)
         info = info["HeWeather6"][0]
