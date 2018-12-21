@@ -15,18 +15,18 @@ def create():
     time = Event.event_time(-1, -1, -1, -1, -1)
     print('设置提醒时间')
     if loop == 1:
-        time.year = int(input('输入年份(输入一个数字比如:2018):'))
-        time.month = int(input('输入月份(输入一个数字比如:2):'))
-        time.day = int(input('输入天数(输入一个数字比如:28):'))
-        time.hour = int(input('输入小时(输入一个数字比如:18 二十四小时制):'))
-        time.minute = int(input('输入分钟(输入一个数字比如:0):'))
+        time.year = int(input('输入年份:'))
+        time.month = int(input('输入月份:'))
+        time.day = int(input('输入天数:'))
+        time.hour = int(input('输入小时:'))
+        time.minute = int(input('输入分钟:'))
     elif loop == 2:
-        time.hour = int(input('输入小时(输入一个数字比如:2):'))
-        time.minute = int(input('输入分钟(输入一个数字比如:0):'))
+        time.hour = int(input('输入小时:'))
+        time.minute = int(input('输入分钟:'))
     elif loop == 3:
-        time.weekday = int(input('输入周几(输入一个数字比如:0 0-6分别对应周日到周六):'))
-        time.hour = int(input('输入小时(输入一个数字比如:18):'))
-        time.minute = int(input('输入分钟:(输入一个数字比如:0)'))
+        time.weekday = int(input('输入周几:'))
+        time.hour = int(input('输入小时:'))
+        time.minute = int(input('输入分钟:'))
     else:
         print("无效值")
         return

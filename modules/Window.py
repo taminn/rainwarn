@@ -3,6 +3,7 @@ import sys
 import os
 import threading
 import time
+import random
 
 import Save
 import weather
@@ -61,9 +62,9 @@ def show(msg,weather,city):
     os.chdir(sys.path[0])
     #这里的路径需要注意
     try:
-        photo = tkinter.PhotoImage(file="./modules/backimage/backimage.gif")
+        photo = tkinter.PhotoImage(file="./modules/backimage/backimage"+str(random.randint(1,7))+".gif")
     except:
-        photo = tkinter.PhotoImage(file='./backimage/backimage.gif')
+        photo = tkinter.PhotoImage(file="./backimage/backimage"+str(random.randint(1,7))+".gif")
     canvas = tkinter.Canvas(window, bg='white', height=300,
                             width=450, highlightthickness=0)
     canvas.create_image(0, 0, anchor='nw', image=photo)
@@ -97,4 +98,4 @@ class MessageBox():
 
 
 if __name__=='__main__':
-    MessageBox("")
+    MessageBox("春江潮水连海平")
